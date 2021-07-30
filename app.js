@@ -108,7 +108,7 @@ app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
       }
 
       .text {
-        width: 100%;
+        width: 95%;
         height: 90%;
         position: absolute;
         left: 0;
@@ -124,7 +124,7 @@ app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
       .text p {
         width: 1555px;
         font-weight: bold;
-        font-size: 75px;
+        font-size: 70px;
         font-family: "BPG WEB 002", sans-serif;
         line-height: 100px;
       }
@@ -134,7 +134,6 @@ app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
         bottom: 35px;
         left: 50%;
         transform: translate(-50%, -50%);
-
         font-size: 76px;
         line-height: 87px;
         z-index: 100;

@@ -49,7 +49,7 @@ body {
   height: 90%;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -57,10 +57,10 @@ body {
 }
 
 .text p {
-  width: 1565px;
+  width: 1555px;
   font-weight: bold;
-  font-size: 105px;
-  line-height: 150px;
+  font-size: 95px;
+  line-height: 140px;
 }
 
 .author {
