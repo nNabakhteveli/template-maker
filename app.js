@@ -60,6 +60,7 @@ app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
     <html>
     <style>
       @import url("//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css");
+      @import url("//cdn.web-fonts.ge/fonts/bpg-web-002/css/bpg-web-002.min.css");
 
       body {
         overflow: hidden;
@@ -74,7 +75,7 @@ app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
         margin: 50px 0;
         left: 50%;
         transform: translateX(-50%);
-        font-family: "BPG Nino Mtavruli Bold", sans-serif;
+        font-family: "BPG WEB 002", sans-serif;
         text-align: center;
         position: relative;
         color: white;
@@ -111,8 +112,9 @@ app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
         height: 90%;
         position: absolute;
         left: 0;
-        top: 0;
+        top: 40px;
         display: flex;
+        font-family: "BPG WEB 002", sans-serif;
         justify-content: center;
         align-items: flex-end;
         z-index: 100;
@@ -120,10 +122,11 @@ app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
       }
 
       .text p {
-        width: 1565px;
+        width: 1555px;
         font-weight: bold;
-        font-size: 90px;
-        line-height: 150px;
+        font-size: 75px;
+        font-family: "BPG WEB 002", sans-serif;
+        line-height: 100px;
       }
 
       .author {
