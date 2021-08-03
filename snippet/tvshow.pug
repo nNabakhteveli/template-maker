@@ -23,18 +23,18 @@ link(rel='stylesheet' href='../assets/post/css/post.css')
             button.guest#twoguest 2 სტუმარი
           h3.text-center შაბლონის შექმნა გადაცემისთვის
           form#contactForm.mb-5(action='http://127.0.0.1:3000/post' enctype="multipart/form-data" method='POST' name='contactForm')
-          .rows-container
-            .row
-              .col-md-6.form-group.mb-3
-                label.col-form-label სტუმარი
-                input#name.form-control(for='guest' type='text' name='guest-name' placeholder='სტუმარის სახელი')
-            .form-group
-                label(for='exampleFormControlFile1') სურათის ატვირთვა
-                input#exampleFormControlFile1.form-control-file(for='image' name='image' type='file' required)
-          .row.justify-content-center
-            .col-md-5.form-group.text-center
-              input.btn.btn-block.btn-primary.rounded-0.py-2.px-4(type='submit' value='შექმნა') 
-              span.submitting
+            .rows-container
+              .row
+                .col-md-6.form-group.mb-3
+                  label.col-form-label სტუმარი
+                  input#name.form-control(for='guest' type='text' name='guest-name' placeholder='სტუმარის სახელი' required='true')
+              .form-group
+                  label(for='exampleFormControlFile1') სურათის ატვირთვა
+                  input#exampleFormControlFile1.form-control-file(for='image' name='image' type='file' required)
+            .row.justify-content-center
+              .col-md-5.form-group.text-center
+                input.btn.btn-block.btn-primary.rounded-0.py-2.px-4(type='submit' value='შექმნა') 
+                span.submitting
 
 
 
