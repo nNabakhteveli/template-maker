@@ -1,66 +1,68 @@
 const oneguest = document.querySelector("#oneguest");
 const twoguest = document.querySelector("#twoguest");
 const container = document.querySelector(".rows-container");
-
 const buttonsArr = document.querySelectorAll('.guest');
 
-twoguest.addEventListener('click', () => {
-    let isFocused = (document.activeElement === twoguest);
-    console.log(isFocused);
 
-    if(isFocused) {
-        const brElement = document.createElement('br');
-
-        const firstDiv = document.createElement("div");
-        firstDiv.className = 'col-md-6.form-group.mb-3';
-
-        const label = document.createElement('label');
-        const labelNode = document.createTextNode('მეორე სტუმარი');
+const appendSecondForm = (function() {
+    let executed = false;
+    return function() {
+        if (!executed) {
+            twoguest.addEventListener('click', () => {
+            executed = true;
+                let isFocused = (document.activeElement === twoguest);
+                console.log(isFocused);
         
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.name = 'guest-name'
-        input.id = 'name';
-        input.className = 'form-control';
-        input.placeholder = 'მეორე სტუმარის სახელი';
-        input.setAttribute('for', 'guest');
-        input.required = 'true';
+                if(isFocused) {
+                   const HTMLtoAppend = `
+                   <div class="rows-container">
+                        <div class="row"></div>
+                        <div class="col-md-6 form-group mb-3">
+                            <label class="col-form-label">სტუმარი</label>
+                            <input class="form-control" id="name" for="guest" type="text" name="guest-name" placeholder="სტუმარის სახელი"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">სურათის ატვირთვა</label>
+                            <input class="form-control-file" id="exampleFormControlFile1" for="image" name="image" type="file" required="required"/>
+                        </div>
+                        <div class="col-md-6 form-group mb-3">
+                            <label class="col-form-label">მეორე სტუმარი</label>
+                            <input class="form-control" id="name" for="guest" type="text" name="guest-name" placeholder="სტუმარის სახელი"/>
+                            <div class="form-group">
+                            <label for="exampleFormControlFile1">სურათის ატვირთვა</label>
+                            <input class="form-control-file" id="exampleFormControlFile1" for="image" name="image" type="file" required="required"/>
+                            </div>
+                        </div>
+                        </div>
+                   `;
 
-        const secondDiv = document.createElement('div');
-        secondDiv.className = 'form-group';
+                   container.innerHTML = HTMLtoAppend;           
+                }
+            });
 
-        const secondLabel = document.createElement("label");
-        const secondLabelNode = document.createTextNode("სურათის ატვირთვა");
-
-        const secondInput = document.createElement("input");
-        secondInput.className = 'form-control-file';
-        secondInput.setAttribute('for', 'image');
-        secondInput.name = 'image';
-        secondInput.type = 'file';
-        secondInput.required = 'true';
-
+            oneguest.addEventListener('click', () => {
+                executed = true;
+                let isFocused = (document.activeElement === oneguest);
+                console.log(isFocused);
         
-    // -------------Main Div--------------------
-        label.append(labelNode);
-        firstDiv.appendChild(brElement);
-        firstDiv.appendChild(label);
-        firstDiv.appendChild(input);
-    // -----------------------------------------
+                if(isFocused) {
+                    const HTMLtoAppend = `
+                    <div class="rows-container">
+                        <div class="row"></div>
+                        <div class="col-md-6 form-group mb-3">
+                            <label class="col-form-label">სტუმარი</label>
+                            <input class="form-control" id="name" for="guest" type="text" name="guest-name" placeholder="სტუმარის სახელი"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">სურათის ატვირთვა</label>
+                            <input class="form-control-file" id="exampleFormControlFile1" for="image" name="image" type="file" required="required"/>
+                        </div>
+                    </div>`;
+                    container.innerHTML = HTMLtoAppend;           
+                }
+            });
+        }
+    };
+})();
 
-    // ------------Secondary Div----------------------------
-        secondLabel.append(secondLabelNode);
-        secondDiv.appendChild(secondLabel);
-        secondDiv.appendChild(secondInput);
-    // -----------------------------------------------------
-
-        firstDiv.appendChild(secondDiv);
-        container.appendChild(firstDiv); // Appending whole content to the html
-                
-    }
-
-    if(document.activeElement === oneguest) {
-        container.removeChild(firstDiv);
-    }
-
-
-});
+appendSecondForm();
