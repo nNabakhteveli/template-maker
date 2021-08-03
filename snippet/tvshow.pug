@@ -19,18 +19,18 @@ link(rel='stylesheet' href='../assets/post/css/post.css')
       .col-md-7
         .form.h-100.contact-wrap.p-5
           .guests 
-            button.guest#oneguest 1 სტუმარი
-            button.guest#twoguest 2 სტუმარი
           h3.text-center შაბლონის შექმნა გადაცემისთვის
-          form#contactForm.mb-5(action='http://127.0.0.1:3000/post' enctype="multipart/form-data" method='POST' name='contactForm')
+          form#contactForm.mb-5(action='http://127.0.0.1:3000/for-TV-show/TVshow-success' enctype="multipart/form-data" method='GET' name='contactForm')
+            button.guest#oneguest(for='oneuser' name='oneuser') 1 სტუმარი
+            button.guest#twoguest(for='twouser' name='twouser') 2 სტუმარი
             .rows-container
               .row
                 .col-md-6.form-group.mb-3
                   label.col-form-label სტუმარი
-                  input#name.form-control(for='guest' type='text' name='guest-name' placeholder='სტუმარის სახელი' required='true')
-              .form-group
-                  label(for='exampleFormControlFile1') სურათის ატვირთვა
-                  input#exampleFormControlFile1.form-control-file(for='image' name='image' type='file' required)
+                  input#name.form-control(for='guest' type='text' name='guestName' placeholder='სტუმარის სახელი' required='true')
+                  .form-group
+                    label(for='exampleFormControlFile1') სურათის ატვირთვა
+                    input#exampleFormControlFile1.form-control-file(for='image' name='image' type='file' required)
             .row.justify-content-center
               .col-md-5.form-group.text-center
                 input.btn.btn-block.btn-primary.rounded-0.py-2.px-4(type='submit' value='შექმნა') 

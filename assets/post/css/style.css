@@ -166,14 +166,16 @@ label.error {
 }
 
 .guests {
-  margin-left: calc(100% - 185px);
-  margin-top: calc(20% - 130px);
+  position: relative;
+  top: -20px;
+  left: 380px;
   margin-bottom: 10px;
 }
 
 .guest {
   border: 1px solid black;
-  transition: 0.3s;
+  transition: 0.4s;
+  margin: 7px
 }
 
 .guest:focus {

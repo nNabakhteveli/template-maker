@@ -1,0 +1,16 @@
+doctype html
+include parts/links-in-header
+link(rel='stylesheet' href='../assets/post/css/bootstrap.min.css')
+link(rel='stylesheet' href='../assets/post/css/style.css')
+link(rel='stylesheet' href='../assets/post/css/tvshow-success.css')
+
+a(href='/')
+    button.btn.btn-success#btn(type='button') უკან დაბრუნება
+a(href='../assets/post/generatedTemplate/image.png' download='')
+    button.btn.btn-warning#btn(type='button') გადმოწერა
+.post-container
+    img.img(src=`../assets/templates/tvshow-template.png`)
+    div.text
+        p=guestName 
+    
+include parts/js_scripts
