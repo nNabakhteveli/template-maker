@@ -33,6 +33,10 @@ app.get("/", (req, res) => {
     res.render(__dirname + "/snippet/create-post")
 });
 
+app.get('/for-TV-show', (req, res) => {
+  res.render(__dirname + "/snippet/tvshow.pug");
+});
+
 
 app.post("/post", [urlencodedParser, upload.single("image")], (req, res) => {
   res.render(__dirname + "/snippet/post-success", {

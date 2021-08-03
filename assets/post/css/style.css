@@ -1,9 +1,14 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #efefef;
   line-height: 1.9;
   color: #8c8c8c;
-  position: relative; }
+  position: relative; 
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -152,4 +157,26 @@ label.error {
   display: none;
   font-weight: bold;
   font-size: 12px;
-  color: #000; }
+  color: #000; 
+}
+
+
+#nav-button {
+  margin: 20px 0 0 20px;
+}
+
+.guests {
+  margin-left: calc(100% - 185px);
+  margin-top: calc(20% - 130px);
+  margin-bottom: 10px;
+}
+
+.guest {
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.guest:focus {
+  color: white;
+  background-color: black;
+}

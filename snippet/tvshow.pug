@@ -9,24 +9,24 @@ link(rel='stylesheet' href='../assets/post/css/post.css')
 
 
 .nav
-  a(href='/for-TV-show')
-    button.btn.btn-info#nav-button(type='button') გადაცემისთვის
+  a(href='/')
+    button.btn.btn-info#nav-button(type='button') შაბლონისთვის
+
 
 .content
   .container
     .row.align-items-stretch.justify-content-center.no-gutters
       .col-md-7
         .form.h-100.contact-wrap.p-5
-          h3.text-center შაბლონის შექმნა
+          .guests 
+            button.guest#oneguest 1 სტუმარი
+            button.guest#twoguest 2 სტუმარი
+          h3.text-center შაბლონის შექმნა გადაცემისთვის
           form#contactForm.mb-5(action='http://127.0.0.1:3000/post' enctype="multipart/form-data" method='POST' name='contactForm')
             .row
               .col-md-6.form-group.mb-3
-                label.col-form-label ავტორი
-                input#name.form-control(for='author' type='text' name='name' placeholder='ავტორის სახელი')
-            .row.mb-5
-              .col-md-12.form-group.mb-3
-                label.col-form-label განცხადება
-                textarea#message.form-control(for='message' name='message' cols='30' rows='4' placeholder='დაწერე განცხადება')
+                label.col-form-label სტუმარი
+                input#name.form-control(for='author' type='text' name='name' placeholder='სტუმარის სახელი')
             .form-group
                 label(for='exampleFormControlFile1') სურათის ატვირთვა
                 input#exampleFormControlFile1.form-control-file(for='image' name='image' type='file' required)
@@ -43,3 +43,4 @@ script(src='../assets/post/js/bootstrap.min.js')
 script(src='../assets/post/js/jquery.validate.min.js')
 script(src='../assets/post/js/main.js')
 script(src='../assets/post/js/create_post.js')
+script(src='../assets/js/twshow.js')
