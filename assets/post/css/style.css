@@ -180,3 +180,7 @@ label.error {
   color: white;
   background-color: black;
 }
+
+.form-group {
+  margin-top: 10px;
+}
